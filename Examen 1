@@ -8,7 +8,7 @@ from tkinter import messagebox as mBox
 
 def cal():
     res=0
-    if p1.get()=="Ciencias Naturales":
+    if p1.get().lower()=="ciencias naturales":
         res+=20
     if p2.get()=="Primaria":
         res+=20
@@ -82,7 +82,7 @@ casilla_5p5=tk.Checkbutton(ventana,text="5ta opción",variable=opcion_5p5)
 casilla_5p5.deselect()
 casilla_5p5.grid(column=4,row=7,sticky=tk.W)
 
-accion=ttk.Button(ventana,text="Imprimir Datos Personales",command=cal)
+accion=ttk.Button(ventana,text="Calificar",command=cal)
 accion.grid(column=2,row=21)
 
 ventana.mainloop()
